@@ -12,7 +12,7 @@ export class AppComponent {
     this.dates.push(Date.now());
     this.toggled = true;
   }
-  count5() {
-    return this.dates.length > 3 ? true : false;
+  count5(timeStamp) {
+    return this.dates.indexOf(timeStamp) > 3 ? true : false;
   }
 }

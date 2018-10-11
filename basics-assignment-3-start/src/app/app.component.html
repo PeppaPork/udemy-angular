@@ -15,7 +15,9 @@
     <div class="col-xs-12">
         <button type="button" class="btn btn-primary" (click)="onToggle()">Display Details</button>
         <p *ngIf="toggled">Secret Password = tuna</p>
-        <p *ngFor="let date of dates" [ngClass]="{'whiteColor': count5()}">{{date}}</p>
+        <div *ngFor="let date of dates"
+        [ngStyle]="{'background-color': count5(date) ? 'blue' : 'transparent'}"
+        [ngClass]="{'whiteColor': count5(date)}">{{date}}</div>
     </div>
   </div>
 </div>
